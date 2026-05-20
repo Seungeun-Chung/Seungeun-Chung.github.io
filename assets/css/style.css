@@ -1,20 +1,7 @@
 /* ===========================
    Font
    =========================== */
-@font-face {
-  font-family: 'D2Coding';
-  src: url('https://cdn.jsdelivr.net/gh/naver/d2codingfont/D2Coding/D2Coding-Ver1.3.2-20180524.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'D2Coding';
-  src: url('https://cdn.jsdelivr.net/gh/naver/d2codingfont/D2CodingBold/D2CodingBold-Ver1.3.2-20180524.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Freesentation:wght@400;700;900&display=swap');
 
 /* ===========================
    CSS Variables & Reset
@@ -44,7 +31,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'D2Coding', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Freesentation', 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -170,7 +157,7 @@ section:last-child { border-bottom: none; }
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.2;
@@ -178,7 +165,7 @@ section:last-child { border-bottom: none; }
 }
 
 .hero-text .role {
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 16px;
@@ -186,7 +173,7 @@ section:last-child { border-bottom: none; }
 
 .hero-text p {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   max-width: 520px;
 }
 
@@ -624,10 +611,14 @@ footer {
    Responsive
    =========================== */
 @media (max-width: 768px) {
-  .hero { flex-direction: column; gap: 24px; }
+  .hero {
+    flex-direction: column;
+    gap: 28px;
+  }
   .hero-image {
-    width: 120px;
-    height: 150px;
+    width: 100%;
+    max-width: 280px;
+    height: 320px;
     align-self: flex-start;
   }
   section {
@@ -637,7 +628,10 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .hero-text h1 { font-size: 1.8rem; }
+  .hero-image {
+    max-width: 220px;
+    height: 260px;
+  }
   .nav-links { gap: 20px; }
   .post-item { flex-direction: column; }
   .post-meta { text-align: left; }
