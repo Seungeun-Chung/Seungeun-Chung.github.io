@@ -2,12 +2,12 @@
    CSS Variables & Reset
    =========================== */
 :root {
-  --bg: #0e1510;
-  --bg-card: #162019;
-  --bg-nav: rgba(14, 21, 16, 0.96);
-  --border: #293d2b;
-  --text: #cdd8c4;
-  --text-muted: #7a9472;
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --bg-nav: rgba(13, 17, 23, 0.96);
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
   --accent: #78ad72;
   --accent-hover: #96c48f;
   --tag-bg: #1a2c1c;
@@ -168,13 +168,13 @@ section:last-child { border-bottom: none; }
 
 .btn-primary {
   background: var(--accent);
-  color: #0e1510;
+  color: #0d1117;
   border-color: var(--accent);
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: #0e1510;
+  color: #0d1117;
   border-color: var(--accent-hover);
 }
 
