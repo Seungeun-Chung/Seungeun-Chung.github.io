@@ -1,4 +1,22 @@
 /* ===========================
+   Font
+   =========================== */
+@font-face {
+  font-family: 'D2Coding';
+  src: url('https://cdn.jsdelivr.net/gh/naver/d2codingfont/D2Coding/D2Coding-Ver1.3.2-20180524.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'D2Coding';
+  src: url('https://cdn.jsdelivr.net/gh/naver/d2codingfont/D2CodingBold/D2CodingBold-Ver1.3.2-20180524.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===========================
    CSS Variables & Reset
    =========================== */
 :root {
@@ -20,15 +38,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 60px; /* fixed nav 높이 보정 */
+  scroll-behavior: auto; /* JS가 직접 제어하므로 smooth 비활성화 */
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'D2Coding', 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -99,7 +115,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
 }
 
 section:last-child { border-bottom: none; }
@@ -618,7 +633,6 @@ footer {
   section {
     min-height: auto;
     padding: 80px 0;
-    scroll-snap-align: none;
   }
 }
 
