@@ -19,7 +19,11 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 60px; /* fixed nav 높이 보정 */
+}
 
 body {
   background: var(--bg);
@@ -95,6 +99,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-snap-align: start;
 }
 
 section:last-child { border-bottom: none; }
@@ -132,15 +137,13 @@ section:last-child { border-bottom: none; }
   margin-bottom: 64px;
 }
 
-/* Profile image with left-fade gradient mask */
 .hero-image {
   flex-shrink: 0;
-  width: 300px;
-  height: 360px;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, black 60%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, black 60%);
+  width: 260px;
+  height: 320px;
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .hero-image img {
@@ -606,14 +609,17 @@ footer {
    Responsive
    =========================== */
 @media (max-width: 768px) {
-  .hero { flex-direction: column-reverse; gap: 32px; }
+  .hero { flex-direction: column; gap: 24px; }
   .hero-image {
-    width: 100%;
-    height: 240px;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+    width: 120px;
+    height: 150px;
+    align-self: flex-start;
   }
-  section { min-height: auto; padding: 80px 0; }
+  section {
+    min-height: auto;
+    padding: 80px 0;
+    scroll-snap-align: none;
+  }
 }
 
 @media (max-width: 640px) {
