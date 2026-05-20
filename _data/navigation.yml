@@ -1,0 +1,11 @@
+main:
+  - title: "소개"
+    url: /about/
+  - title: "프로젝트"
+    url: /projects/
+  - title: "경력/이력"
+    url: /resume/
+  - title: "자격증"
+    url: /certifications/
+  - title: "블로그"
+    url: /blog/
