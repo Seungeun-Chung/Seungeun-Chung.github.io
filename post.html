@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post | Seungeun Chung</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- highlight.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Seungeun Chung</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">소개</a></li>
+        <li><a href="index.html#projects">프로젝트</a></li>
+        <li><a href="index.html#resume">경력</a></li>
+        <li><a href="index.html#certifications">자격증</a></li>
+        <li><a href="blog.html">블로그</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="post-container">
+      <a href="blog.html" class="back-link">← 블로그 목록으로</a>
+      <div id="post-content">
+        <p class="loading">포스트를 불러오는 중...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Seungeun Chung · Built with HTML & ❤️</p>
+  </footer>
+
+  <!-- marked.js for Markdown parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+  <!-- highlight.js for code highlighting -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <script>
+    // Configure marked with syntax highlighting
+    marked.setOptions({
+      highlight: function(code, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          return hljs.highlight(code, { language: lang }).value;
+        }
+        return hljs.highlightAuto(code).value;
+      },
+      breaks: true,
+      gfm: true
+    });
+
+    // Parse front matter (---) from markdown
+    function parseFrontMatter(text) {
+      const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+      if (!match) return { meta: {}, content: text };
+
+      const meta = {};
+      match[1].split('\n').forEach(line => {
+        const [key, ...val] = line.split(':');
+        if (key && val.length) {
+          const value = val.join(':').trim().replace(/^["']|["']$/g, '');
+          // Parse tags array: [tag1, tag2]
+          if (value.startsWith('[')) {
+            meta[key.trim()] = value.slice(1, -1).split(',').map(t => t.trim().replace(/^["']|["']$/g, ''));
+          } else {
+            meta[key.trim()] = value;
+          }
+        }
+      });
+      return { meta, content: match[2] };
+    }
+
+    async function loadPost() {
+      const container = document.getElementById('post-content');
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get('file');
+
+      if (!file) {
+        container.innerHTML = '<div class="empty-state">포스트를 찾을 수 없습니다.</div>';
+        return;
+      }
+
+      try {
+        const res = await fetch(`posts/${file}`);
+        if (!res.ok) throw new Error('fetch failed');
+        const raw = await res.text();
+        const { meta, content } = parseFrontMatter(raw);
+
+        document.title = `${meta.title || 'Post'} | Seungeun Chung`;
+
+        const tagsHtml = (meta.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+
+        container.innerHTML = `
+          <div class="post-header">
+            <h1>${meta.title || ''}</h1>
+            <div class="post-meta">
+              <span>${meta.date || ''}</span>
+              ${meta.category ? `<span>${meta.category}</span>` : ''}
+            </div>
+            ${tagsHtml ? `<div class="tags" style="margin-top:12px">${tagsHtml}</div>` : ''}
+          </div>
+          <div class="post-content">${marked.parse(content)}</div>
+        `;
+
+        // Apply syntax highlighting to code blocks
+        document.querySelectorAll('pre code').forEach(block => {
+          hljs.highlightElement(block);
+        });
+
+      } catch (e) {
+        container.innerHTML = '<div class="empty-state">포스트를 불러올 수 없습니다.</div>';
+      }
+    }
+
+    loadPost();
+  </script>
+
+</body>
+</html>
