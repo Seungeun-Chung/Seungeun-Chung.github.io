@@ -612,14 +612,15 @@ footer {
    =========================== */
 @media (max-width: 620px) {
   .hero {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
   }
   .hero-image {
-    order: -1;
-    width: 100px;
-    height: 124px;
+    order: -1;        /* 우측 → 좌측으로 이동 */
+    flex-shrink: 0;
+    width: 90px;
+    height: 110px;
   }
   section {
     min-height: auto;
