@@ -610,28 +610,20 @@ footer {
 /* ===========================
    Responsive
    =========================== */
-@media (max-width: 860px) {
-  /* 이미지를 텍스트 위 좌측으로 이동 */
+@media (max-width: 620px) {
   .hero {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
   .hero-image {
-    order: -1;           /* 텍스트보다 먼저 렌더링 → 상단 배치 */
-    width: 110px;
-    height: 135px;
+    order: -1;
+    width: 100px;
+    height: 124px;
   }
   section {
     min-height: auto;
     padding: 80px 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-image {
-    width: 90px;
-    height: 110px;
   }
   .nav-links { gap: 20px; }
   .post-item { flex-direction: column; }
