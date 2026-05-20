@@ -89,8 +89,12 @@ main {
 }
 
 section {
-  padding: 80px 0;
+  min-height: 100vh;
+  padding: 100px 0 80px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section:last-child { border-bottom: none; }
@@ -116,15 +120,35 @@ section:last-child { border-bottom: none; }
    Hero / About
    =========================== */
 #about {
-  padding-top: 40px;
+  padding-top: 60px;
   border-bottom: 1px solid var(--border);
 }
 
 .hero {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 48px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
+}
+
+/* Profile image with left-fade gradient mask */
+.hero-image {
+  flex-shrink: 0;
+  width: 300px;
+  height: 360px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, black 60%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, black 60%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .hero-text h1 {
@@ -581,8 +605,18 @@ footer {
 /* ===========================
    Responsive
    =========================== */
+@media (max-width: 768px) {
+  .hero { flex-direction: column-reverse; gap: 32px; }
+  .hero-image {
+    width: 100%;
+    height: 240px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40%);
+  }
+  section { min-height: auto; padding: 80px 0; }
+}
+
 @media (max-width: 640px) {
-  .hero { flex-direction: column; gap: 24px; }
   .hero-text h1 { font-size: 1.8rem; }
   .nav-links { gap: 20px; }
   .post-item { flex-direction: column; }
