@@ -84,6 +84,18 @@
     scrollToSection(diff > 0 ? current + 1 : current - 1);
   }, { passive: true });
 
+  // nav 링크 클릭 → 동일 애니메이션으로 해당 섹션 이동
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const targetY = target.offsetTop - NAV_HEIGHT;
+      animateTo(targetY);
+    });
+  });
+
   // 키보드 지원 (PageDown / PageUp / 화살표)
   window.addEventListener('keydown', function (e) {
     if (window.innerWidth <= MOBILE_BREAKPOINT) return;
