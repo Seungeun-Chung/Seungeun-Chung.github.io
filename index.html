@@ -16,6 +16,7 @@
         <li><a href="#about">소개</a></li>
         <li><a href="#projects">프로젝트</a></li>
         <li><a href="#resume">이력</a></li>
+        <li><a href="#publications">논문</a></li>
         <li><a href="#certifications">수상</a></li>
         <li><a href="blog.html">블로그</a></li>
       </ul>
@@ -46,20 +47,10 @@
       <h2 class="section-title">기술 스택</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h4>Languages</h4>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">C</span>
-          </div>
-        </div>
-        <div class="skill-group">
           <h4>AI / ML</h4>
           <div class="tags">
             <span class="tag">PyTorch</span>
             <span class="tag">MLLM</span>
-            <span class="tag">Grounding DINO</span>
-            <span class="tag">Grad-CAM</span>
-            <span class="tag">DeepStream</span>
           </div>
         </div>
         <div class="skill-group">
@@ -68,15 +59,13 @@
             <span class="tag">Reasoning Segmentation</span>
             <span class="tag">Multimodal Learning</span>
             <span class="tag">Object Detection</span>
-            <span class="tag">XAI</span>
           </div>
         </div>
         <div class="skill-group">
-          <h4>Tools</h4>
+          <h4>Language</h4>
           <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">Linux</span>
-            <span class="tag">NVIDIA Jetson</span>
+            <span class="tag">Korean (Native)</span>
+            <span class="tag">English (Fluent)</span>
           </div>
         </div>
       </div>
@@ -87,9 +76,9 @@
       <h2 class="section-title">프로젝트 / 연구</h2>
       <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-reasoning-segmentation.md'" style="cursor:pointer">
           <h3>Reasoning Segmentation via Prompting LLMs</h3>
-          <p>CoT 프롬프팅과 In-Context Learning을 활용해 복잡한 텍스트 명령을 머신 실행 가능한 쿼리로 변환하는 파이프라인 개발. MLLM의 공간 인식 세그멘테이션 동작을 분석.</p>
+          <p>CoT 프롬프팅과 In-Context Learning으로 복잡한 텍스트 쿼리를 세그멘테이션 명령으로 변환하는 파이프라인 개발.</p>
           <div class="tags">
             <span class="tag">MLLM</span>
             <span class="tag">CoT Prompting</span>
@@ -97,52 +86,52 @@
           </div>
           <div class="project-links">
             <span style="font-size:0.8rem;color:var(--accent)">2025.05 – Current</span>
+            <a href="post.html?file=2026-05-21-reasoning-segmentation.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-guifir.md'" style="cursor:pointer">
           <h3>GuiFiR: Guitar Finger Reading</h3>
-          <p>기타 연주 손가락 자세 추정을 위한 오디오-비전 멀티모달 학습 연구. Grounding DINO로 5,800장 자동 레이블링 파이프라인 구축, SOTA 달성 (MAE-H 9.372). IEEE Multimedia 심사 중.</p>
+          <p>오디오-비전 멀티모달 학습으로 기타 연주 손가락 자세 추정. 5,800장 자동 레이블링 파이프라인 구축, SOTA 달성.</p>
           <div class="tags">
             <span class="tag">Multimodal</span>
-            <span class="tag">Grounding DINO</span>
             <span class="tag">Hand Pose Estimation</span>
           </div>
           <div class="project-links">
             <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2025.04</span>
+            <a href="post.html?file=2026-05-21-guifir.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-license-plate-detection.md'" style="cursor:pointer">
           <h3>Edge Device 번호판 검출</h3>
-          <p>4K 고해상도 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 88.25% → 93.48% 향상. NVIDIA DeepStream 기반 엔드-투-엔드 파이프라인 독자 구축 및 납품.</p>
+          <p>4K 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 88.25% → 93.48% 향상, 엔드-투-엔드 파이프라인 납품.</p>
           <div class="tags">
             <span class="tag">Object Detection</span>
-            <span class="tag">DeepStream</span>
             <span class="tag">Edge AI</span>
-            <span class="tag">NVIDIA Jetson</span>
           </div>
           <div class="project-links">
             <span style="font-size:0.8rem;color:var(--accent)">2024.09 – 2025.02</span>
+            <a href="post.html?file=2026-05-21-license-plate-detection.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-skin-microbiome-ai.md'" style="cursor:pointer">
           <h3>피부 마이크로바이옴 AI 진단 모듈</h3>
-          <p>피부 마이크로바이옴 데이터를 활용한 AI 기반 이미징 피부 진단 모듈 개발. Grad-CAM XAI 시각화로 비전문가에게 AI 판단 근거 제공. 평균 정확도 82.57% 달성 (목표치 80% 초과).</p>
+          <p>마이크로바이옴 데이터 기반 피부 진단 AI 개발. Grad-CAM XAI 시각화로 판단 근거 제공, 정확도 82.57% 달성.</p>
           <div class="tags">
-            <span class="tag">XAI</span>
-            <span class="tag">Grad-CAM</span>
             <span class="tag">Image Classification</span>
+            <span class="tag">XAI</span>
           </div>
           <div class="project-links">
             <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2023.12</span>
+            <a href="post.html?file=2026-05-21-skin-microbiome-ai.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-facial-expression-system.md'" style="cursor:pointer">
           <h3>시각장애인 표정 정보 전달 시스템</h3>
-          <p>시각장애인을 위한 얼굴 표정 정보 전달 웨어러블 시스템 설계 및 평가. ASCC 2023 (방콕) Grand Award 수상.</p>
+          <p>얼굴 표정 정보를 시각장애인에게 전달하는 웨어러블 시스템 설계. ASCC 2023 Grand Award 수상.</p>
           <div class="tags">
             <span class="tag">Wearable</span>
             <span class="tag">Facial Expression</span>
@@ -150,6 +139,7 @@
           </div>
           <div class="project-links">
             <span style="font-size:0.8rem;color:var(--accent)">2023.03 – 2023.07</span>
+            <a href="post.html?file=2026-05-21-facial-expression-system.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
           </div>
         </div>
 
@@ -159,6 +149,17 @@
     <!-- ===== RESUME ===== -->
     <section id="resume">
       <h2 class="section-title">이력</h2>
+
+      <div class="resume-section">
+        <h3>Work Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>AI Engineer</h3>
+            <div class="org">FPT Software Korea</div>
+            <div class="period">2026.04 — 현재</div>
+          </div>
+        </div>
+      </div>
 
       <div class="resume-section">
         <h3>Education</h3>
@@ -182,9 +183,13 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section id="publications">
+      <h2 class="section-title">논문</h2>
 
       <div class="resume-section">
-        <h3>Publication</h3>
         <div class="timeline">
           <div class="timeline-item">
             <h3>See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models</h3>
@@ -199,25 +204,12 @@
           <div class="timeline-item">
             <h3>GuiFiR: Weakly and Semi-Supervised Learning of Hand Pose Estimation for Guitar Finger Reading</h3>
             <div class="org">IEEE Access (Under Review — Resubmission)</div>
-            <div class="period">2025</div>
+            <div class="period">2026</div>
           </div>
           <div class="timeline-item">
             <h3>Object Detection Method Using Frame Partitioning for Vehicle License Plate Detection</h3>
             <div class="org">The 37th Workshop on Image Processing and Image Understanding (IPIU)</div>
             <div class="period">2025</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="resume-section">
-        <h3>Language</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Korean — Native</h3>
-          </div>
-          <div class="timeline-item">
-            <h3>English — Fluent</h3>
-            <div class="org">OPIC Intermediate High</div>
           </div>
         </div>
       </div>

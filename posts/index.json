@@ -1,5 +1,45 @@
 [
   {
+    "file": "2026-05-21-reasoning-segmentation.md",
+    "title": "Reasoning Segmentation via Prompting LLMs",
+    "description": "CoT 프롬프팅과 In-Context Learning 기반 Reasoning Segmentation 파이프라인 개발 연구.",
+    "date": "2026-05-21",
+    "tags": ["MLLM", "Reasoning Segmentation", "CoT Prompting"],
+    "category": "Research"
+  },
+  {
+    "file": "2026-05-21-guifir.md",
+    "title": "GuiFiR: Guitar Finger Reading",
+    "description": "오디오-비전 멀티모달 학습으로 기타 연주 손가락 자세를 추정하는 연구. SOTA 달성.",
+    "date": "2026-05-21",
+    "tags": ["Multimodal", "Hand Pose Estimation", "Audio-Visual"],
+    "category": "Research"
+  },
+  {
+    "file": "2026-05-21-license-plate-detection.md",
+    "title": "Edge Device 번호판 검출",
+    "description": "4K 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 93.48% 달성, 납품 완료.",
+    "date": "2026-05-21",
+    "tags": ["Object Detection", "Edge AI", "NVIDIA Jetson"],
+    "category": "Project"
+  },
+  {
+    "file": "2026-05-21-skin-microbiome-ai.md",
+    "title": "피부 마이크로바이옴 AI 진단 모듈",
+    "description": "마이크로바이옴 이미지 기반 피부 진단 AI. Grad-CAM XAI 시각화로 판단 근거 제공.",
+    "date": "2026-05-21",
+    "tags": ["Image Classification", "XAI", "Healthcare AI"],
+    "category": "Project"
+  },
+  {
+    "file": "2026-05-21-facial-expression-system.md",
+    "title": "시각장애인 표정 정보 전달 시스템",
+    "description": "얼굴 표정 AI와 웨어러블 피드백을 결합한 접근성 시스템. ASCC 2023 Grand Award 수상.",
+    "date": "2026-05-21",
+    "tags": ["Wearable", "Facial Expression", "Accessibility"],
+    "category": "Project"
+  },
+  {
     "file": "2026-05-20-hello-world.md",
     "title": "블로그를 시작합니다",
     "description": "포트폴리오 블로그 첫 포스트입니다.",
