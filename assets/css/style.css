@@ -128,7 +128,7 @@ section:last-child { border-bottom: none; }
    Hero / About
    =========================== */
 #about {
-  padding-top: 36px;
+  padding-top: 72px;
   border-bottom: 1px solid var(--border);
 }
 
