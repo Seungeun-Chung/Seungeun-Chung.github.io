@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seungeun Chung | Portfolio</title>
-  <meta name="description" content="정승은의 포트폴리오 블로그">
+  <title>SeungEun Chung | AI Engineer</title>
+  <meta name="description" content="AI Engineer 정승은의 포트폴리오 블로그">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Seungeun Chung</a>
+      <a href="index.html" class="nav-logo">SeungEun Chung</a>
       <ul class="nav-links">
         <li><a href="#about">소개</a></li>
         <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#resume">경력</a></li>
-        <li><a href="#certifications">자격증</a></li>
+        <li><a href="#resume">이력</a></li>
+        <li><a href="#certifications">수상</a></li>
         <li><a href="blog.html">블로그</a></li>
       </ul>
     </div>
@@ -28,17 +28,17 @@
     <section id="about">
       <div class="hero">
         <div class="hero-image">
-          <img src="assets/images/profile_img.jpg" alt="Seungeun Chung">
+          <img src="assets/images/profile_img.jpg" alt="SeungEun Chung">
         </div>
         <div class="hero-text">
           <h1>안녕하세요,<br>정승은입니다</h1>
           <p class="role">AI Engineer</p>
-          <p>문제를 해결하는 것에 열정을 가진 소프트웨어 엔지니어입니다.<br>여기에 간단한 자기소개를 작성해주세요.</p>
+          <p>MLLM 기반 Reasoning Segmentation을 연구하는 AI 엔지니어입니다.<br>
+          오디오-비전 멀티모달 학습, 실세계 데이터 전처리 및 파이프라인 구축 경험을 바탕으로<br>
+          복잡한 AI 문제를 데이터 중심적으로 해결합니다.</p>
           <div class="hero-links">
-            <a href="https://github.com/Seungeun-Chung" class="btn btn-primary" target="_blank">
-              GitHub
-            </a>
-            <a href="assets/docs/FPT_CV_SeungEun Chung_v1.pdf" class="btn btn-outline" target="_blank">Resume</a>
+            <a href="https://www.linkedin.com/in/seung-eun-chung" class="btn btn-primary" target="_blank">LinkedIn</a>
+            <a href="assets/docs/CV_SeungeunChung_v5 1.pdf" class="btn btn-outline" target="_blank">Resume</a>
           </div>
         </div>
       </div>
@@ -48,23 +48,35 @@
         <div class="skill-group">
           <h4>Languages</h4>
           <div class="tags">
-            <!-- 사용하는 언어를 추가하세요 -->
             <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
+            <span class="tag">C</span>
           </div>
         </div>
         <div class="skill-group">
-          <h4>Frameworks</h4>
+          <h4>AI / ML</h4>
           <div class="tags">
-            <!-- 프레임워크를 추가하세요 -->
-            <span class="tag">예시 추가</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">MLLM</span>
+            <span class="tag">Grounding DINO</span>
+            <span class="tag">Grad-CAM</span>
+            <span class="tag">DeepStream</span>
           </div>
         </div>
         <div class="skill-group">
-          <h4>Tools & DevOps</h4>
+          <h4>Research Areas</h4>
+          <div class="tags">
+            <span class="tag">Reasoning Segmentation</span>
+            <span class="tag">Multimodal Learning</span>
+            <span class="tag">Object Detection</span>
+            <span class="tag">XAI</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
           <div class="tags">
             <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
+            <span class="tag">Linux</span>
+            <span class="tag">NVIDIA Jetson</span>
           </div>
         </div>
       </div>
@@ -72,74 +84,207 @@
 
     <!-- ===== PROJECTS ===== -->
     <section id="projects">
-      <h2 class="section-title">프로젝트</h2>
+      <h2 class="section-title">프로젝트 / 연구</h2>
       <div class="projects-grid">
 
         <div class="project-card">
-          <h3>프로젝트 이름</h3>
-          <p>프로젝트에 대한 간략한 설명을 작성해주세요. 어떤 문제를 해결했는지 적으면 좋습니다.</p>
+          <h3>Reasoning Segmentation via Prompting LLMs</h3>
+          <p>CoT 프롬프팅과 In-Context Learning을 활용해 복잡한 텍스트 명령을 머신 실행 가능한 쿼리로 변환하는 파이프라인 개발. MLLM의 공간 인식 세그멘테이션 동작을 분석.</p>
           <div class="tags">
-            <span class="tag">기술 스택</span>
-            <span class="tag">예시</span>
+            <span class="tag">MLLM</span>
+            <span class="tag">CoT Prompting</span>
+            <span class="tag">Reasoning Segmentation</span>
           </div>
           <div class="project-links">
-            <a href="#" target="_blank">↗ GitHub</a>
-            <a href="#" target="_blank">↗ Demo</a>
+            <span style="font-size:0.8rem;color:var(--accent)">2025.05 – Current</span>
           </div>
         </div>
 
-        <!-- 프로젝트 카드를 복사해서 추가하세요 -->
+        <div class="project-card">
+          <h3>GuiFiR: Guitar Finger Reading</h3>
+          <p>기타 연주 손가락 자세 추정을 위한 오디오-비전 멀티모달 학습 연구. Grounding DINO로 5,800장 자동 레이블링 파이프라인 구축, SOTA 달성 (MAE-H 9.372). IEEE Multimedia 심사 중.</p>
+          <div class="tags">
+            <span class="tag">Multimodal</span>
+            <span class="tag">Grounding DINO</span>
+            <span class="tag">Hand Pose Estimation</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2025.04</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Edge Device 번호판 검출</h3>
+          <p>4K 고해상도 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 88.25% → 93.48% 향상. NVIDIA DeepStream 기반 엔드-투-엔드 파이프라인 독자 구축 및 납품.</p>
+          <div class="tags">
+            <span class="tag">Object Detection</span>
+            <span class="tag">DeepStream</span>
+            <span class="tag">Edge AI</span>
+            <span class="tag">NVIDIA Jetson</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size:0.8rem;color:var(--accent)">2024.09 – 2025.02</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>피부 마이크로바이옴 AI 진단 모듈</h3>
+          <p>피부 마이크로바이옴 데이터를 활용한 AI 기반 이미징 피부 진단 모듈 개발. Grad-CAM XAI 시각화로 비전문가에게 AI 판단 근거 제공. 평균 정확도 82.57% 달성 (목표치 80% 초과).</p>
+          <div class="tags">
+            <span class="tag">XAI</span>
+            <span class="tag">Grad-CAM</span>
+            <span class="tag">Image Classification</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2023.12</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>시각장애인 표정 정보 전달 시스템</h3>
+          <p>시각장애인을 위한 얼굴 표정 정보 전달 웨어러블 시스템 설계 및 평가. ASCC 2023 (방콕) Grand Award 수상.</p>
+          <div class="tags">
+            <span class="tag">Wearable</span>
+            <span class="tag">Facial Expression</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <div class="project-links">
+            <span style="font-size:0.8rem;color:var(--accent)">2023.03 – 2023.07</span>
+          </div>
+        </div>
 
       </div>
     </section>
 
     <!-- ===== RESUME ===== -->
     <section id="resume">
-      <h2 class="section-title">경력 / 이력</h2>
-
-      <div class="resume-section">
-        <h3>Work Experience</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>직위 / 역할</h3>
-            <div class="org">회사명</div>
-            <div class="period">0000.00 — 현재</div>
-            <ul>
-              <li>주요 업무 및 성과를 작성해주세요</li>
-              <li>구체적인 수치나 임팩트를 포함하면 좋습니다</li>
-            </ul>
-          </div>
-          <!-- timeline-item을 복사해서 추가하세요 -->
-        </div>
-      </div>
+      <h2 class="section-title">이력</h2>
 
       <div class="resume-section">
         <h3>Education</h3>
         <div class="timeline">
           <div class="timeline-item">
-            <h3>전공 / 학위</h3>
-            <div class="org">학교명</div>
-            <div class="period">0000.00 — 0000.00</div>
+            <h3>Master's degree of Electronic Engineering</h3>
+            <div class="org">Kookmin University, Korea</div>
+            <div class="period">2024.03 — 2026.02</div>
+            <ul>
+              <li>Reasoning Segmentation via LLMs 및 멀티모달 AI 연구</li>
+              <li>주요 수강: AI Methodologies, Math & Optimization for AI, Advanced Intelligent Systems, AR/VR/XR</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Bachelor of Electronic Engineering</h3>
+            <div class="org">Kookmin University, Korea</div>
+            <div class="period">2020.03 — 2024.02</div>
+            <ul>
+              <li>성적우수 장학금 수혜 (2학기)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3>Publication</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Enhancing Reasoning Segmentation via MLLM-based In-Context Learning</h3>
+            <div class="org">The 38th Workshop on Image Processing and Image Understanding (IPIU)</div>
+            <div class="period">2026</div>
+          </div>
+          <div class="timeline-item">
+            <h3>GuiFiR: Weakly and Semi-Supervised Learning of Hand Pose Estimation for Guitar Finger Reading</h3>
+            <div class="org">IEEE Multimedia (Under Review)</div>
+            <div class="period">2025</div>
+          </div>
+          <div class="timeline-item">
+            <h3>Object Detection Method Using Frame Partitioning for Vehicle License Plate Detection</h3>
+            <div class="org">The 37th Workshop on Image Processing and Image Understanding (IPIU)</div>
+            <div class="period">2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3>Language</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Korean — Native</h3>
+          </div>
+          <div class="timeline-item">
+            <h3>English — Fluent</h3>
+            <div class="org">OPIC Intermediate High</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== CERTIFICATIONS ===== -->
+    <!-- ===== AWARDS ===== -->
     <section id="certifications">
-      <h2 class="section-title">자격증</h2>
+      <h2 class="section-title">수상 내역</h2>
       <div class="cert-grid">
 
         <div class="cert-card">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon">🏆</div>
           <div class="cert-info">
-            <h4>자격증 이름</h4>
-            <p>발급 기관</p>
-            <p>0000.00 취득</p>
+            <h4>Excellent Poster Presentation Award</h4>
+            <p>IPIU 2026 (38th Workshop on Image Processing and Image Understanding)</p>
+            <p>2026.02</p>
           </div>
         </div>
 
-        <!-- cert-card를 복사해서 추가하세요 -->
+        <div class="cert-card">
+          <div class="cert-icon">🥇</div>
+          <div class="cert-info">
+            <h4>Grand Award (1st Place)</h4>
+            <p>Asian Students' Capstone Design Contest (ASCC 2023) — Bangkok, Thailand</p>
+            <p>2023.09</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🥇</div>
+          <div class="cert-info">
+            <h4>1st Place Award</h4>
+            <p>ASCC 2023 Korean Preliminary Competition — Busan, Korea</p>
+            <p>2023.08</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🥈</div>
+          <div class="cert-info">
+            <h4>Excellence Award (2nd Place)</h4>
+            <p>Capstone Design Contest, Kookmin University — Seoul, Korea</p>
+            <p>2023.08</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🥉</div>
+          <div class="cert-info">
+            <h4>Bronze Prize</h4>
+            <p>Electronic Engineering Design Competition, Kookmin University</p>
+            <p>2023.12</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🥉</div>
+          <div class="cert-info">
+            <h4>Bronze Prize</h4>
+            <p>Electronic Engineering Design Competition, Kookmin University</p>
+            <p>2023.01</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info">
+            <h4>5th Place Award</h4>
+            <p>Korean Institute of Electrical Engineers, Smart Energy Contest — Yeosu, Korea</p>
+            <p>2022.07</p>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -147,7 +292,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Seungeun Chung · Built with HTML & ❤️</p>
+    <p>© 2026 SeungEun Chung · AI Engineer</p>
   </footer>
 
   <script src="assets/js/scroll.js"></script>
