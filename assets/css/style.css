@@ -612,12 +612,10 @@ footer {
    =========================== */
 @media (max-width: 620px) {
   .hero {
-    flex-direction: row;
     align-items: flex-start;
     gap: 16px;
   }
   .hero-image {
-    order: -1;        /* 우측 → 좌측으로 이동 */
     flex-shrink: 0;
     width: 90px;
     height: 110px;
