@@ -6,10 +6,14 @@
   <title>Blog | Seungeun Chung</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    section {
+    html, body {
       height: auto;
-      min-height: 0;
-      overflow: visible;
+      overflow-y: auto;
+    }
+    section {
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
       padding: 20px 0 60px;
       justify-content: flex-start;
     }
@@ -32,7 +36,7 @@
   </nav>
 
   <main>
-    <section style="padding-top: 20px;">
+    <section style="padding-top: 20px; height: auto; overflow: visible;">
       <h2 class="section-title">블로그</h2>
       <div id="post-list" class="post-list">
         <p class="loading">포스트를 불러오는 중...</p>

@@ -9,34 +9,34 @@
   },
   {
     "file": "2026-05-21-guifir.md",
-    "title": "GuiFiR: Guitar Finger Reading",
-    "description": "오디오-비전 멀티모달 학습으로 기타 연주 손가락 자세를 추정하는 연구. SOTA 달성.",
+    "title": "GuiFiR: 오디오-비전 멀티모달로 기타 손가락 위치 인식하기",
+    "description": "합성 데이터와 오디오 기반 약지도 학습을 결합해 기타 손가락 자세를 추정하는 멀티모달 연구. IEEE Access 투고 중.",
     "date": "2026-05-21",
-    "tags": ["Multimodal", "Hand Pose Estimation", "Audio-Visual"],
+    "tags": ["Multimodal", "Hand Pose Estimation", "Weakly Supervised", "IEEE Access"],
     "category": "Research"
   },
   {
     "file": "2026-05-21-license-plate-detection.md",
-    "title": "Edge Device 번호판 검출",
-    "description": "4K 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 93.48% 달성, 납품 완료.",
+    "title": "Edge AI 기반 4K 실시간 차량 번호판 인식 시스템",
+    "description": "프레임 4분할 탐색 알고리즘으로 Jetson Orin NX에서 F1-score 93.0%, 60 FPS 달성. 현장 납품 완료.",
     "date": "2026-05-21",
-    "tags": ["Object Detection", "Edge AI", "NVIDIA Jetson"],
+    "tags": ["Object Detection", "Edge AI", "NVIDIA Jetson", "TensorRT"],
     "category": "Project"
   },
   {
     "file": "2026-05-21-skin-microbiome-ai.md",
-    "title": "피부 마이크로바이옴 AI 진단 모듈",
-    "description": "마이크로바이옴 이미지 기반 피부 진단 AI. Grad-CAM XAI 시각화로 판단 근거 제공.",
+    "title": "사진 한 장으로 피부 상태를 진단한다 — 피부 마이크로바이옴 AI",
+    "description": "피부 사진으로 6가지 마이크로바이옴 점수를 예측하는 회귀 모델. Grad-CAM XAI로 판단 근거 시각화.",
     "date": "2026-05-21",
-    "tags": ["Image Classification", "XAI", "Healthcare AI"],
+    "tags": ["Image Classification", "XAI", "Grad-CAM", "Healthcare AI"],
     "category": "Project"
   },
   {
     "file": "2026-05-21-facial-expression-system.md",
-    "title": "시각장애인 표정 정보 전달 시스템",
-    "description": "얼굴 표정 AI와 웨어러블 피드백을 결합한 접근성 시스템. ASCC 2023 Grand Award 수상.",
+    "title": "시각장애인을 위한 AI 표정 인식 웨어러블 — ASCC 2023 Grand Award",
+    "description": "표정 인식 AI와 손목 진동 밴드를 결합한 접근성 보조 장치. ASCC 2023 국제 대회 1위 수상.",
     "date": "2026-05-21",
-    "tags": ["Wearable", "Facial Expression", "Accessibility"],
+    "tags": ["Wearable", "Facial Expression", "Accessibility", "ASCC 2023"],
     "category": "Project"
   },
   {
