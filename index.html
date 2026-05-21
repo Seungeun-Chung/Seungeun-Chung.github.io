@@ -14,9 +14,9 @@
       <a href="index.html" class="nav-logo">SeungEun Chung</a>
       <ul class="nav-links">
         <li><a href="#about">소개</a></li>
-        <li><a href="#projects">프로젝트</a></li>
         <li><a href="#resume">이력</a></li>
         <li><a href="#publications">논문</a></li>
+        <li><a href="#projects">프로젝트</a></li>
         <li><a href="#certifications">수상</a></li>
         <li><a href="blog.html">블로그</a></li>
       </ul>
@@ -37,6 +37,13 @@
           <p>데이터를 기반으로 현실의 문제를 해결하는 AI 엔지니어입니다.<br>
           AI 모델 개발부터 비즈니스 관점의 AI 솔루션 제안까지,<br>
           기술과 컨설팅을 함께 수행하고 있습니다.</p>
+          <details class="contact-toggle">
+            <summary>Contact</summary>
+            <div class="contact-info">
+              <a href="mailto:seungeun.chung0222@gmail.com">seungeun.chung0222@gmail.com</a>
+              <span>(+82) 010-8590-3277</span>
+            </div>
+          </details>
           <div class="hero-links">
             <a href="https://www.linkedin.com/in/seung-eun-chung" class="btn btn-primary" target="_blank">LinkedIn</a>
             <a href="assets/docs/CV_SeungeunChung_v5 1.pdf" class="btn btn-outline" target="_blank">Resume</a>
@@ -72,101 +79,6 @@
             <span class="tag">English (Fluent)</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects">
-      <h2 class="section-title">프로젝트 / 연구</h2>
-      <div class="projects-grid">
-
-        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-reasoning-segmentation.md'" style="cursor:pointer">
-          <h3>Reasoning Segmentation via Prompting LLMs</h3>
-          <ul>
-            <li>CoT 프롬프팅으로 복잡한 텍스트 명령을 실행 가능한 쿼리로 변환</li>
-            <li>In-Context Learning 기반 파인튜닝 없는 성능 향상</li>
-            <li>MLLM 공간 인식 세그멘테이션 동작 분석</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">MLLM</span>
-            <span class="tag">CoT</span>
-            <span class="tag">Reasoning Segmentation</span>
-          </div>
-          <div class="project-links">
-            <span style="font-size:0.8rem;color:var(--accent)">2025.05 – Current</span>
-            <a href="post.html?file=2026-05-21-reasoning-segmentation.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
-          </div>
-        </div>
-
-        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-guifir.md'" style="cursor:pointer">
-          <h3>GuiFiR: Guitar Finger Reading</h3>
-          <ul>
-            <li>오디오-비전 멀티모달 학습으로 기타 손가락 자세 추정</li>
-            <li>Grounding DINO로 5,800장 자동 레이블링 파이프라인 구축</li>
-            <li>SOTA 달성 (MAE-H 9.372)</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Multimodal</span>
-            <span class="tag">Hand Pose Estimation</span>
-          </div>
-          <div class="project-links">
-            <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2025.04</span>
-            <a href="post.html?file=2026-05-21-guifir.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
-          </div>
-        </div>
-
-        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-license-plate-detection.md'" style="cursor:pointer">
-          <h3>Edge Device 번호판 검출</h3>
-          <ul>
-            <li>4K 실시간 처리를 위한 프레임 분할 알고리즘 설계</li>
-            <li>F1-score 88.25% → 93.48% 향상</li>
-            <li>DeepStream 기반 엔드-투-엔드 파이프라인 독자 구축·납품</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Object Detection</span>
-            <span class="tag">Edge AI</span>
-          </div>
-          <div class="project-links">
-            <span style="font-size:0.8rem;color:var(--accent)">2024.09 – 2025.02</span>
-            <a href="post.html?file=2026-05-21-license-plate-detection.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
-          </div>
-        </div>
-
-        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-skin-microbiome-ai.md'" style="cursor:pointer">
-          <h3>피부 마이크로바이옴 AI 진단 모듈</h3>
-          <ul>
-            <li>마이크로바이옴 이미지 기반 피부 상태 분류 AI 개발</li>
-            <li>Grad-CAM XAI 시각화로 비전문가에게 판단 근거 제공</li>
-            <li>평균 정확도 82.57% 달성 (목표치 80% 초과)</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Image Classification</span>
-            <span class="tag">XAI</span>
-          </div>
-          <div class="project-links">
-            <span style="font-size:0.8rem;color:var(--accent)">2023.09 – 2023.12</span>
-            <a href="post.html?file=2026-05-21-skin-microbiome-ai.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
-          </div>
-        </div>
-
-        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-facial-expression-system.md'" style="cursor:pointer">
-          <h3>시각장애인 표정 정보 전달 시스템</h3>
-          <ul>
-            <li>얼굴 표정 AI + 웨어러블 피드백 결합 시스템 설계·평가</li>
-            <li>사용성·착용감 중심 사용자 연구 수행</li>
-            <li>ASCC 2023 Grand Award 수상 (방콕)</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Wearable</span>
-            <span class="tag">Facial Expression</span>
-            <span class="tag">Accessibility</span>
-          </div>
-          <div class="project-links">
-            <span style="font-size:0.8rem;color:var(--accent)">2023.03 – 2023.07</span>
-            <a href="post.html?file=2026-05-21-facial-expression-system.md" style="margin-left:auto;font-size:0.8rem">자세히 →</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -225,13 +137,13 @@
             <div class="period">2026</div>
           </div>
           <div class="timeline-item">
-            <h3>Enhancing Reasoning Segmentation via MLLM-based In-Context Learning</h3>
-            <div class="org">The 38th Workshop on Image Processing and Image Understanding (IPIU)</div>
+            <h3>GuiFiR: Weakly and Semi-Supervised Learning of Hand Pose Estimation for Guitar Finger Reading</h3>
+            <div class="org">IEEE Access (Under Review — Resubmission)</div>
             <div class="period">2026</div>
           </div>
           <div class="timeline-item">
-            <h3>GuiFiR: Weakly and Semi-Supervised Learning of Hand Pose Estimation for Guitar Finger Reading</h3>
-            <div class="org">IEEE Access (Under Review — Resubmission)</div>
+            <h3>Enhancing Reasoning Segmentation via MLLM-based In-Context Learning</h3>
+            <div class="org">The 38th Workshop on Image Processing and Image Understanding (IPIU)</div>
             <div class="period">2026</div>
           </div>
           <div class="timeline-item">
@@ -240,6 +152,101 @@
             <div class="period">2025</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <h2 class="section-title">프로젝트 / 연구</h2>
+      <div class="projects-grid">
+
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-reasoning-segmentation.md'" style="cursor:pointer">
+          <div class="project-period">2025.05 – 2026.02</div>
+          <h3>Reasoning Segmentation via Prompting LLMs</h3>
+          <ul>
+            <li>CoT 프롬프팅으로 복잡한 텍스트 명령을 실행 가능한 쿼리로 변환</li>
+            <li>In-Context Learning 기반 파인튜닝 없는 성능 향상</li>
+            <li>MLLM 공간 인식 세그멘테이션 동작 분석</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">MLLM</span>
+            <span class="tag">CoT</span>
+            <span class="tag">Reasoning Segmentation</span>
+          </div>
+          <div class="project-links">
+            <a href="post.html?file=2026-05-21-reasoning-segmentation.md">자세히 →</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-guifir.md'" style="cursor:pointer">
+          <div class="project-period">2023.09 – 2025.04</div>
+          <h3>GuiFiR: Guitar Finger Reading</h3>
+          <ul>
+            <li>오디오-비전 멀티모달 학습으로 기타 손가락 자세 추정</li>
+            <li>Grounding DINO로 5,800장 자동 레이블링 파이프라인 구축</li>
+            <li>SOTA 달성 (MAE-H 9.372)</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Multimodal</span>
+            <span class="tag">Hand Pose Estimation</span>
+          </div>
+          <div class="project-links">
+            <a href="post.html?file=2026-05-21-guifir.md">자세히 →</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-license-plate-detection.md'" style="cursor:pointer">
+          <div class="project-period">2024.09 – 2025.02</div>
+          <h3>Edge Device 번호판 검출</h3>
+          <ul>
+            <li>4K 실시간 처리를 위한 프레임 분할 알고리즘 설계</li>
+            <li>F1-score 88.25% → 93.48% 향상</li>
+            <li>DeepStream 기반 엔드-투-엔드 파이프라인 독자 구축·납품</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Object Detection</span>
+            <span class="tag">Edge AI</span>
+          </div>
+          <div class="project-links">
+            <a href="post.html?file=2026-05-21-license-plate-detection.md">자세히 →</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-skin-microbiome-ai.md'" style="cursor:pointer">
+          <div class="project-period">2023.09 – 2023.12</div>
+          <h3>피부 마이크로바이옴 AI 진단 모듈</h3>
+          <ul>
+            <li>마이크로바이옴 이미지 기반 피부 상태 분류 AI 개발</li>
+            <li>Grad-CAM XAI 시각화로 비전문가에게 판단 근거 제공</li>
+            <li>평균 정확도 82.57% 달성 (목표치 80% 초과)</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Image Classification</span>
+            <span class="tag">XAI</span>
+          </div>
+          <div class="project-links">
+            <a href="post.html?file=2026-05-21-skin-microbiome-ai.md">자세히 →</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="location.href='post.html?file=2026-05-21-facial-expression-system.md'" style="cursor:pointer">
+          <div class="project-period">2023.03 – 2023.07</div>
+          <h3>시각장애인 표정 정보 전달 시스템</h3>
+          <ul>
+            <li>얼굴 표정 AI + 웨어러블 피드백 결합 시스템 설계·평가</li>
+            <li>사용성·착용감 중심 사용자 연구 수행</li>
+            <li>ASCC 2023 Grand Award 수상 (방콕)</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Wearable</span>
+            <span class="tag">Facial Expression</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <div class="project-links">
+            <a href="post.html?file=2026-05-21-facial-expression-system.md">자세히 →</a>
+          </div>
+        </div>
+
       </div>
     </section>
 

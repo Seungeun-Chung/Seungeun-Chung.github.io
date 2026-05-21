@@ -108,9 +108,9 @@ section {
 section:last-child { border-bottom: none; }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   color: var(--text);
   display: flex;
   align-items: center;
@@ -137,7 +137,7 @@ section:last-child { border-bottom: none; }
   align-items: center;
   justify-content: flex-start;
   gap: 28px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .hero-image {
@@ -158,7 +158,7 @@ section:last-child { border-bottom: none; }
 }
 
 .hero-text h1 {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.2;
@@ -178,10 +178,47 @@ section:last-child { border-bottom: none; }
   max-width: 520px;
 }
 
+/* Contact toggle */
+.contact-toggle {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.contact-toggle summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  list-style: none;
+  padding: 4px 0;
+  transition: color var(--transition);
+  user-select: none;
+}
+
+.contact-toggle summary::-webkit-details-marker { display: none; }
+.contact-toggle summary::after { content: ' ▾'; font-size: 0.7rem; }
+.contact-toggle[open] summary::after { content: ' ▴'; }
+.contact-toggle summary:hover { color: var(--text); }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 0 2px 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.contact-info a { color: var(--text-muted); }
+.contact-info a:hover { color: var(--accent); }
+
 .hero-links {
   display: flex;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .btn {
@@ -222,7 +259,7 @@ section:last-child { border-bottom: none; }
 /* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -256,15 +293,22 @@ section:last-child { border-bottom: none; }
    =========================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.project-period {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 14px 18px;
   transition: border-color var(--transition), transform var(--transition);
 }
 
@@ -274,9 +318,9 @@ section:last-child { border-bottom: none; }
 }
 
 .project-card h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project-card p {
@@ -287,16 +331,16 @@ section:last-child { border-bottom: none; }
 }
 
 .project-card ul {
-  padding-left: 16px;
-  margin-bottom: 16px;
+  padding-left: 14px;
+  margin-bottom: 10px;
   color: var(--text-muted);
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
-.project-card ul li { margin-bottom: 3px; }
+.project-card ul li { margin-bottom: 2px; }
 
-.project-card .tags { margin-bottom: 16px; }
+.project-card .tags { margin-bottom: 10px; }
 
 .project-links {
   display: flex;
@@ -330,7 +374,7 @@ section:last-child { border-bottom: none; }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .timeline-item::before {
@@ -371,7 +415,7 @@ section:last-child { border-bottom: none; }
 
 .timeline-item ul li { margin-bottom: 4px; }
 
-.resume-section { margin-bottom: 48px; }
+.resume-section { margin-bottom: 28px; }
 
 .resume-section h3 {
   font-size: 1rem;
@@ -637,7 +681,8 @@ footer {
     overflow: visible;
     padding: 80px 0;
   }
-  .nav-links { gap: 14px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; }
   .post-item { flex-direction: column; }
   .post-meta { text-align: left; }
 }
