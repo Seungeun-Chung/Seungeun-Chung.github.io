@@ -34,9 +34,9 @@
         <div class="hero-text">
           <h1>안녕하세요,<br>정승은입니다</h1>
           <p class="role">AI Engineer</p>
-          <p>MLLM 기반 Reasoning Segmentation을 연구하는 AI 엔지니어입니다.<br>
-          오디오-비전 멀티모달 학습, 실세계 데이터 전처리 및 파이프라인 구축 경험을 바탕으로<br>
-          복잡한 AI 문제를 데이터 중심적으로 해결합니다.</p>
+          <p>데이터를 기반으로 현실의 문제를 해결하는 AI 엔지니어입니다.<br>
+          AI 모델 개발부터 비즈니스 관점의 AI 솔루션 제안까지,<br>
+          기술과 컨설팅을 함께 수행하고 있습니다.</p>
           <div class="hero-links">
             <a href="https://www.linkedin.com/in/seung-eun-chung" class="btn btn-primary" target="_blank">LinkedIn</a>
             <a href="assets/docs/CV_SeungeunChung_v5 1.pdf" class="btn btn-outline" target="_blank">Resume</a>
@@ -51,6 +51,10 @@
           <div class="tags">
             <span class="tag">PyTorch</span>
             <span class="tag">MLLM</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Hugging Face</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">Docker</span>
           </div>
         </div>
         <div class="skill-group">
@@ -78,10 +82,14 @@
 
         <div class="project-card" onclick="location.href='post.html?file=2026-05-21-reasoning-segmentation.md'" style="cursor:pointer">
           <h3>Reasoning Segmentation via Prompting LLMs</h3>
-          <p>CoT 프롬프팅과 In-Context Learning으로 복잡한 텍스트 쿼리를 세그멘테이션 명령으로 변환하는 파이프라인 개발.</p>
+          <ul>
+            <li>CoT 프롬프팅으로 복잡한 텍스트 명령을 실행 가능한 쿼리로 변환</li>
+            <li>In-Context Learning 기반 파인튜닝 없는 성능 향상</li>
+            <li>MLLM 공간 인식 세그멘테이션 동작 분석</li>
+          </ul>
           <div class="tags">
             <span class="tag">MLLM</span>
-            <span class="tag">CoT Prompting</span>
+            <span class="tag">CoT</span>
             <span class="tag">Reasoning Segmentation</span>
           </div>
           <div class="project-links">
@@ -92,7 +100,11 @@
 
         <div class="project-card" onclick="location.href='post.html?file=2026-05-21-guifir.md'" style="cursor:pointer">
           <h3>GuiFiR: Guitar Finger Reading</h3>
-          <p>오디오-비전 멀티모달 학습으로 기타 연주 손가락 자세 추정. 5,800장 자동 레이블링 파이프라인 구축, SOTA 달성.</p>
+          <ul>
+            <li>오디오-비전 멀티모달 학습으로 기타 손가락 자세 추정</li>
+            <li>Grounding DINO로 5,800장 자동 레이블링 파이프라인 구축</li>
+            <li>SOTA 달성 (MAE-H 9.372)</li>
+          </ul>
           <div class="tags">
             <span class="tag">Multimodal</span>
             <span class="tag">Hand Pose Estimation</span>
@@ -105,7 +117,11 @@
 
         <div class="project-card" onclick="location.href='post.html?file=2026-05-21-license-plate-detection.md'" style="cursor:pointer">
           <h3>Edge Device 번호판 검출</h3>
-          <p>4K 실시간 처리를 위한 프레임 분할 알고리즘 설계. F1-score 88.25% → 93.48% 향상, 엔드-투-엔드 파이프라인 납품.</p>
+          <ul>
+            <li>4K 실시간 처리를 위한 프레임 분할 알고리즘 설계</li>
+            <li>F1-score 88.25% → 93.48% 향상</li>
+            <li>DeepStream 기반 엔드-투-엔드 파이프라인 독자 구축·납품</li>
+          </ul>
           <div class="tags">
             <span class="tag">Object Detection</span>
             <span class="tag">Edge AI</span>
@@ -118,7 +134,11 @@
 
         <div class="project-card" onclick="location.href='post.html?file=2026-05-21-skin-microbiome-ai.md'" style="cursor:pointer">
           <h3>피부 마이크로바이옴 AI 진단 모듈</h3>
-          <p>마이크로바이옴 데이터 기반 피부 진단 AI 개발. Grad-CAM XAI 시각화로 판단 근거 제공, 정확도 82.57% 달성.</p>
+          <ul>
+            <li>마이크로바이옴 이미지 기반 피부 상태 분류 AI 개발</li>
+            <li>Grad-CAM XAI 시각화로 비전문가에게 판단 근거 제공</li>
+            <li>평균 정확도 82.57% 달성 (목표치 80% 초과)</li>
+          </ul>
           <div class="tags">
             <span class="tag">Image Classification</span>
             <span class="tag">XAI</span>
@@ -131,7 +151,11 @@
 
         <div class="project-card" onclick="location.href='post.html?file=2026-05-21-facial-expression-system.md'" style="cursor:pointer">
           <h3>시각장애인 표정 정보 전달 시스템</h3>
-          <p>얼굴 표정 정보를 시각장애인에게 전달하는 웨어러블 시스템 설계. ASCC 2023 Grand Award 수상.</p>
+          <ul>
+            <li>얼굴 표정 AI + 웨어러블 피드백 결합 시스템 설계·평가</li>
+            <li>사용성·착용감 중심 사용자 연구 수행</li>
+            <li>ASCC 2023 Grand Award 수상 (방콕)</li>
+          </ul>
           <div class="tags">
             <span class="tag">Wearable</span>
             <span class="tag">Facial Expression</span>
@@ -157,6 +181,10 @@
             <h3>AI Engineer</h3>
             <div class="org">FPT Software Korea</div>
             <div class="period">2026.04 — 현재</div>
+            <ul>
+              <li>Vision-Language 모델 기반 멀티모달 퓨전 AI 솔루션 연구·개발</li>
+              <li>고객사 대상 AI 솔루션 기술 컨설팅 및 요구사항 분석·구현</li>
+            </ul>
           </div>
         </div>
       </div>
